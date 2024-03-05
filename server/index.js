@@ -10,6 +10,10 @@ const generalRoutes = require('./routes/general');
 const managementRoutes = require('./routes/management');
 const salesRoutes = require('./routes/sales');
 
+//data imports
+const User = require('./models/User');
+const { dataUser } = require('./data/index')
+
 const app = express();
 
 app.use(express.json());
@@ -35,5 +39,8 @@ mongoose
     .then(() => {
         console.log(`Listening on PORT ${PORT}`);
         console.log('Database Connected!')
+
+        // ONLY ADD DATA ONE TIME
+        // User.insertMany(dataUser)
     })
     .catch((error) => console.log(`${error.message} did not connect`))
