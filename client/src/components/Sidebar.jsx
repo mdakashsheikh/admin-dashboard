@@ -187,7 +187,7 @@ const Sidebar = ({
                     <Box position='absolute' bottom='2rem'>
                         <Divider/>
                         <FlexBetween textTransform='none' gap='1rem' m='1.5rem 2 rem 0 3rem'>
-                            <Box 
+                            {/* <Box 
                                 component='img'
                                 alt='profile'
                                 src={profileImage}
@@ -201,7 +201,7 @@ const Sidebar = ({
                                         {user.name}
                                     </Typography>
                                 </Box>
-                            </Box>
+                            </Box> */}
                         </FlexBetween> 
                     </Box>
                 </Drawer>
